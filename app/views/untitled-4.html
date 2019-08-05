@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wigefor</title>
+    <link rel="stylesheet" href="../../res/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../web/css/styles.css">
+    <link rel="stylesheet" href="../../res/assets/css/untitled.css">
+    <link rel="stylesheet" href="../../res/assets/css/Pretty-Registration-Form.css">
+    <link rel="stylesheet" href="../../res/assets/css/Google-Style-Login.css">
+    <link rel="stylesheet" href="../../res/assets/css/Bootstrap-Payment-Form.css">
+    <script type="text/javascript" src="../../web/js/wigeforAjax.js"></script>
+    <script type="text/javascript" src="../../web/js/script.js"></script>
+    <script type="text/javascript" src="../../res/assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../res/assets/bootstrap/js/bootstrap.min.js"></script>
+</head>
+
+<body onload="getListFormation()">
+    <div class="row register-form">
+    <div class="col-md-7 col-md-offset-2">
+        <h1 class="text-center"> Students Register Form</h1>
+        <div>
+            <div class="progress" style="height : 3px;">
+                <div class="progress-bar" style="width: 10%;background-color : blue"></div>
+            </div>
+            <div>
+                <ul class="nav nav-tabs nav-justified">
+                    <li class="active" id="tab-eleve"><a href="#tab-1" data-toggle="tab">Apprenants<div id="e-tab" style="width : 10px;height : 10px; background-color : red; display :inline-block;"></div></a></li>
+                    <li id="tab-parent"><a href="#tab-2" data-toggle="tab">Tuteurs/ Parents<div id="p-tab" style="width : 10px;height : 10px; background-color : red; display :inline-block;"></div></a></li>
+                    <li id="tab-form"><a href="#tab-3" data-toggle="tab">Formation/Paiements<div id="f-tab" style="width : 10px;height : 10px; background-color : red; display :inline-block;"></div></a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="tab-1">
+                        <form class="form-horizontal" enctype="multipart/form-data" action="apprenant/formApprenant.php" custom-form method="post" name="studentform">
+                            
+                            <div class="form-group" id="photo">
+                                <div class="col-sm-4 label-column"><img src="../../res/assets/img/avatar_2x.png" alt="photo 4X4" width="150" class="img-thumbnail show" />
+                                    <p class="help-block">photo 4x4</p>
+                                </div><span style="color : red;">*</span>
+                                <div class="col-sm-6 input-column">
+                                    <input type="file" id="photo-eleve" name="photo-eleve" class="form-control" />
+                                </div>
+                            </div>
+                            <fieldset>
+                                <legend class="small">information personnelle</legend>
+                            <div class="form-group">
+                                <div class="col-sm-4 label-column">
+                                    <label for="nom-eleve" class="control-label">Nom <span style="color : red;">*</span></label>
+                                    <p class="help-block">First Name</p>
+                                </div>
+                                <div class="col-sm-6 input-column">
+                                    <input type="text" id="nom-eleve" name="nom" class="form-control" onchange="formatName()" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-4 label-column">
+                                    <label for="prenom-eleve" class="control-label">Prenom <span style="color : red;">*</span></label>
+                                    <p class="help-block">Last Name</p>
+                                </div>
+                                <div class="col-sm-6 input-column">
+                                    <input type="text" id="prenom-eleve" name="prenom" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-4 label-column">
+                                    <label for="sexe-eleve" class="control-label">Sexe <span style="color : red;">*</span></label>
+                                    <p class="help-block">Sex</p>
+                                </div>
+                                <div class="col-sm-6 input-column">
+                                    <select class="form-control" name="sexe" id="sexe-eleve">
+                                        <optgroup label="Choose Student Sexe">
+                                            <option value="H">Homme</option>
+                                            <option value="F">Femme</option>
+                                        </optgroup>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-4 label-column">
+                                    <label for="dob-eleve" class="control-label">Date de naissance <span style="color : red;">*</span></label>
+                                    <p class="help-block">Day of birth</p>
+                                </div>
+                                <div class="col-sm-6 input-column">
+                                    <input type="date" id="dob-eleve" name="dob" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-4 label-column">
+                                    <label for="lieu-eleve" class="control-label">Lieu de Naissance <span style="color : red;">*</span></label>
+                                    <p class="help-block">birth place</p>
+                                </div>
+                                <div class="col-sm-6 input-column">
+                                    <input type="text" id="lieu-eleve" name="lieu" class="form-control" />
+                                </div>
+                            </div>
+                            </fieldset>
+                            <fieldset>
+                                <legend class="small">Parcours scolaire</legend>
+                            <div class="form-group">
+                                <div class="col-sm-4 label-column">
+                                    <label for="niveau-eleve" class="control-label">Niveau Scolaire <span style="color : red;">*</span></label>
+                                    <p class="help-block">school level</p>
+                                </div>
+                                <div class="col-sm-6 input-column">
+                                    <input type="text" name="niveau" id="niveau-eleve" class="form-control" />
+                                </div>
+                            </div>
+                            </fieldset>
+                            <form>
+                             <legend class="small">social</legend>
+                            <div class="form-group">
+                                <div class="col-sm-4 label-column">
+
+                                    <label for="groupe-eleve" class="control-label">Groupe Sanguin<span style="color : red;">*</span></label>
+                                    <p class="help-block">blood group</p>
+                                </div>
+                                <div class="col-sm-6 input-column">
+                                    <input type="text"name="groupe" id="groupe-eleve" class="form-control" />
+                                </div>
+                            </div>
+                                <div class="form-group">
+                                    <div class="col-sm-4 label-column">
+                                        <label for="rhesus-eleve" class="control-label">Rhesus <span
+                                                style="color : red;">*</span></label>
+                                        <p class="help-block">rhesus</p>
+                                    </div>
+                                    <div class="col-sm-6 input-column">
+                                        <input type="text" name="rhesus" id="rhesus-eleve" class="form-control"/>
+                                    </div>
+
+                                    <div class="col-sm-4 label-column">
+                                        <label for="status-eleve" class="control-label">Status Matrimonial <span
+                                                style="color : red;">*</span></label>
+                                        <p class="help-block">status</p>
+                                    </div>
+                                    <div class="col-sm-6 input-column">
+                                        <input type="text" name="status" id="status-eleve" class="form-control"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                <div class="col-sm-4 label-column">
+                                    <label for="cni-eleve" class="control-label">N¤ CNI <span style="color : red;">*</span></label>
+                                    <p class="help-block">n¤ cni</p>
+                                </div>
+                                <div class="col-sm-6 input-column">
+                                    <input type="text" id="cni-eleve" name="cni" class="form-control" />
+                                </div>
+                            </div>
+                                <fieldset>
+                                <legend class="small">adresse</legend>
+                            <div class="form-group">
+                                <div class="col-sm-4 label-column">
+                                    <label for="tel-eleve" class="control-label">Telephone <span style="color : red;">*</span></label>
+                                    <p class="help-block">phone number</p>
+                                </div>
+                                <div class="col-sm-6 input-column">
+                                    <input type="tel" name="tel" id="tel-eleve" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-4 label-column">
+                                    <label for="email-eleve" class="control-label">Email <span style="color : red;">*</span></label>
+                                    <p class="help-block">email</p>
+                                </div>
+                                <div class="col-sm-6 input-column">
+                                    <input type="email" name="email" id="email-eleve" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-4 label-column">
+                                    <label for="ville-eleve" class="control-label">Ville de Residence <span style="color : red;">*</span></label>
+                                    <p class="help-block">town</p>
+                                </div>
+                                <div class="col-sm-6 input-column">
+                                    <input type="text" name="ville" id="ville-eleve" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-4 label-column">
+                                    <label for="q-eleve" class="control-label">Quartier <span style="color : red;">*</span></label>
+                                    <p class="help-block">quartier</p>
+                                </div>
+                                <div class="col-sm-6 input-column">
+                                    <input type="text" name="quartier" id="q-eleve" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-4 label-column">
+                                    <label for="reg-eleve" class="control-label">Region <span style="color : red;">*</span></label>
+                                    <p class="help-block">region</p>
+                                </div>
+                                <div class="col-sm-6 input-column">
+                                    <input type="text" name="region" id="reg-eleve" class="form-control" />
+                                </div>
+                            </div>
+                                </fieldset>
+                            <nav>
+                                <ul class="pager">
+                                    <li class="next"><a href="#tab-2">Next</a></li>
+                                </ul>
+                            </nav>
+
+                        <p>First tab content.</p>
+
+                    </div>
+
+                    <div class="tab-pane" id="tab-2">
+                        <div class="form-horizontal custom-form ">
+                            <div class="form-group">
+                                <div class="col-sm-4 label-column">
+                                    <label for="nom-parent" class="control-label">Noms du parent/tuteur <span style="color : red;">*</span></label>
+                                    <p class="help-block">parent&#39;s name</p>
+                                </div>
+                                <div class="col-sm-6 input-column">
+                                    <input type="text" id="nom-parent" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-4 label-column">
+                                    <label for="cni-parent" class="control-label">N¤ CNI <span style="color : red;">*</span></label>
+                                    <p class="help-block">n¤ cni</p>
+                                </div>
+                                <div class="col-sm-6 input-column">
+                                    <input type="text" id="cni-parent" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-4 label-column">
+                                    <label for="prof-parent" class="control-label">Profession <span style="color : red;">*</span></label>
+                                    <p class="help-block">profession</p>
+                                </div>
+                                <div class="col-sm-6 input-column">
+                                    <input type="text" id="prof-parent" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-4 label-column">
+                                    <label for="tel-parent" class="control-label">Telephone <span style="color : red;">*</span></label>
+                                    <p class="help-block">phone number</p>
+                                </div>
+                                <div class="col-sm-6 input-column">
+                                    <input type="tel" id="tel-parent" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-4 label-column">
+                                    <label for="email-parent" class="control-label">Email</label>
+                                    <p class="help-block">email</p>
+                                </div>
+                                <div class="col-sm-6 input-column">
+                                    <input type="email" id="email-parent" class="form-control" />
+                                </div>
+                            </div>
+                            <nav>
+                                <ul class="pager">
+                                    <li class="previous"><a href="#tab-1">Previous</a></li>
+                                    <li class="next"><a href="#tab-3">Next</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <p>Second tab content.</p>
+                    </div>
+                    <div class="tab-pane" id="tab-3">
+
+                            <div class="col-sm-4 label-column">
+                                <label for="formation" class="control-label">Choix de la Formation <span style="color : red;">*</span></label>
+                                <p class="help-block">choose formation</p>
+                            </div>
+                            <div class="col-sm-6 input-column">
+                                <select class="form-control" id="formation" oninput="getFormationInformation(document.getElementById('formation').value)">
+                                </select>
+                            </div>
+                            <div></div>
+                            <div class="jumbotron" id="infos-formation">
+                                <h2>Nom de la formation</h2>
+                                <p >Information concernant la formation</p>
+                                <p><a class="btn btn-default" href="#">Learn more</a></p>
+                            </div>
+                            <table class="table table-striped table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>TRANCHE</th>
+                                        <th>valeur</th>
+                                        <th>à payer le</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="success">Tranche 1</td>
+                                        <td>50000</td>
+                                        <td class="warning"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="success">Tranche 2</td>
+                                        <td>50000</td>
+                                        <td class="warning"></td>
+                                    </tr>
+                                </tbody>
+                                <caption class="text-center text-muted bg-primary">Tranches de Paiement des frais de formation</caption>
+                            </table>
+                            <nav>
+                                <ul class="pager">
+                                    <li class="previous"><a href="#tab-2">Previous</a></li>
+                                </ul>
+                            </nav>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" />Je souscrit entierement aux termes de ce contrat et adhere au reglement de la societe j&#39;usqu&#39;à la fin de ma formation et j&#39;autorise WINSOFT ,centre de formation professionnel à utiliser les services d&#39;un
+                                    hussier en cas de non paiement de mes frais de formation</label><a href="#terme-et-reglement">Terme de contrat et Reglements</a></div>
+                            <div class="form-group">
+                                <div class="col-sm-6 input-column">
+                                    <input type="submit" value="s'inscrire" name="submit" class="form-control" />
+                                </div>
+                            </div>
+                        </form>
+                        <p>Third tab content.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

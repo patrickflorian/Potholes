@@ -1,0 +1,2 @@
+AT
+AT+CMGF=1AT+CMGS="695349610"patrick te dit bonjourour

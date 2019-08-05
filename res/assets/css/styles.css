@@ -1,0 +1,79 @@
+input.form-control{
+  border-color:green;
+}
+
+label{
+  font-size:medium;
+  color:blue;
+}
+
+body{
+}
+
+input.form-control{
+  word-spacing:normal;
+}
+
+form{
+  margin-top:20px;
+  margin-bottom:5px;
+  margin-left:5px;
+  margin-right:5px;
+}
+
+button.btn.btn-default{
+  float:right;
+}
+
+header{
+  font-size:1.5em;
+  font-family:fantasy;
+  color:light-rgb(88,172,88);
+}
+
+button.btn.btn-default{
+  color:rgb(0,0,0);
+}
+
+h1{
+  font-family:fantasy;
+  font-size:1.5em;
+}
+
+textarea.form-control{
+  border-color:green;
+}
+
+button.btn.btn-success.btn-lg{
+}
+
+button.btn.btn-danger.btn-lg{
+  margin-left:10px;
+}
+
+div.login-card{
+  background-color:green;
+}
+
+form.form-horizontal.custom-form{
+  margin-left:-40px;
+  min-height:800px;
+}
+
+p.help-block{
+  color:green;
+}
+
+div.embed-responsive.embed-responsive-16by9{
+  width:100%;
+}
+
+div{
+}
+
+button.navbar-toggle.collapsed{
+}
+
+button.navbar-toggle.collapsed{
+}
+

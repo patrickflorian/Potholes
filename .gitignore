@@ -1,0 +1,10 @@
+/node_modules
+/.idea
+/.git
+/.vscode
+/diagramme
+/modeles
+dump.sql
+bd.sql
+Untitled-1.sql
+wigefor-bd.backup

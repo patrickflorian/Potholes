@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulaire-matiere</title>
+    <link rel="stylesheet" href="../res/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../web/css/styles.css">
+    <link rel="stylesheet" href="assets/css/untitled.css">
+    <link rel="stylesheet" href="../res/assets/css/Pretty-Registration-Form.css">
+    <link rel="stylesheet" href="../res/assets/css/Google-Style-Login.css">
+    <link rel="stylesheet" href="../res/assets/css/Bootstrap-Payment-Form.css">
+</head>
+
+<body>
+    <div class="row register-form">
+    <div class="col-md-7 col-md-offset-2">
+        <h1 class="text-center"> Adminisrator Add Form</h1>
+        <div>
+
+
+        <form class="form-horizontal custom-form">
+                <div class="form-group" id = "photo">
+                    <div class="col-sm-4 label-column">
+                        <img src="../res/assets/img/avatar_2x.png" alt="photo 4X4" width="150" class="img-thumbnail show"/>
+                        <p class="help-block">photo 4x4</p>
+                    </div>
+                    <div class="col-sm-6 input-column">
+                        <input type="file" id="photo-eleve" class="form-control" />
+                    </div>
+                </div> 
+            <fieldset>
+                                <legend class="small">information personnelle</legend>
+                    <div class="form-group">
+                    <div class="col-sm-4 label-column">
+                        <!--suppress XmlInvalidId -->
+                        <label for="name-input-field" class="control-label">Nom </label>
+                        <p class="help-block">First Name </p>
+                    </div>
+                    <div class="col-sm-6 input-column">
+                        <input type="text" id="nom-eleve" class="form-control" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-4 label-column">
+                        <!--suppress XmlInvalidId -->
+                        <label for="name-input-field" class="control-label">Prenom </label>
+                        <p class="help-block">Last Name </p>
+                    </div>
+                    <div class="col-sm-6 input-column">
+                        <input type="text" class="form-control" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-4 label-column">
+                        <!--suppress XmlInvalidId -->
+                        <label for="email-input-field" class="control-label">Sexe </label>
+                        <p class="help-block">Sex </p>
+                    </div>
+                    <div class="col-sm-6 input-column">
+                        <select class="form-control">
+                            <optgroup label="Choose Student Sexe">
+                                <option value="" selected>------------</option>
+                                <option value="H" >Homme</option>
+                                <option value="F">Femme</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-4 label-column">
+                        <!--suppress XmlInvalidId -->
+                        <label for="pawssword-input-field" class="control-label">Date de naissance</label>
+                        <p class="help-block">Day of birth</p>
+                    </div>
+                    <div class="col-sm-6 input-column">
+                        <input type="date" class="form-control"/>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                                <legend class="small">social</legend>
+                <div class="form-group">
+                    <div class="col-sm-4 label-column">
+                        <!--suppress XmlInvalidId -->
+                        <label for="name-input-field" class="control-label">N¤ CNI </label>
+                        <p class="help-block">n¤ cni </p>
+                    </div>
+                    <div class="col-sm-6 input-column">
+                        <input type="text" class="form-control" />
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                                <legend class="small">adresse</legend>
+                <div class="form-group">
+                    <div class="col-sm-4 label-column">
+                        <!--suppress XmlInvalidId -->
+                        <label for="repeat-pawssword-input-field" class="control-label">Telephone</label>
+                        <p class="help-block">phone number</p>
+                    </div>
+                    <div class="col-sm-6 input-column">
+                        <input type="tel" class="form-control"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-4 label-column">
+                        <!--suppress XmlInvalidId -->
+                        <label for="repeat-pawssword-input-field" class="control-label">Email</label>
+                        <p class="help-block">email</p>
+                    </div>
+                    <div class="col-sm-6 input-column">
+                        <input type="email" class="form-control"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-4 label-column">
+                        <!--suppress XmlInvalidId -->
+                        <label for="repeat-pawssword-input-field" class="control-label">Ville de Residence</label>
+                        <p class="help-block">town</p>
+                    </div>
+                    <div class="col-sm-6 input-column">
+                        <input type="text" class="form-control"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-4 label-column">
+                        <!--suppress XmlInvalidId -->
+                        <label for="repeat-pawssword-input-field" class="control-label">Quartier</label>
+                        <p class="help-block">quartier</p>
+                    </div>
+                    <div class="col-sm-6 input-column">
+                        <input type="text" class="form-control"/>
+                    </div>
+                </div>
+                <form class="form-horizontal custom-form">
+                <div class="form-group">
+                    <div class="col-sm-4 label-column">
+                        <!--suppress XmlInvalidId -->
+                        <label for="repeat-pawssword-input-field" class="control-label">Region</label>
+                        <p class="help-block">region</p>
+                    </div>
+                    <div class="col-sm-6 input-column">
+                        <input type="text" class="form-control"/>
+                    </div>
+                </div>
+                    <div class="form-group" style="float : right;">
+                        <input type="reset" class="btn btn-danger" name ="reinitialiser"/>
+                        <input type="submit" class="btn btn-success" value="submit" name="enregistrer" class="form-control"/>
+                    </div>
+        </form>
+            </div>
+            </div>
+        </div>
+    <script src="../res/assets/js/jquery.min.js"></script>
+    <script src="../res/assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>
